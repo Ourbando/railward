@@ -385,7 +385,7 @@ rules:
   - id: deny-macos-security-controls
     effect: deny
     action: bash
-    command: '\b(spctl|csrutil|tccutil|tmutil|dscl|nvram|mdfind|launchctl)\b|\bsecurity\s+(dump-keychain|find-generic-password|find-internet-password|add-trusted-cert)\b|\bdefaults\s+write\b'
+    command: '\b(spctl|csrutil|tccutil|tmutil|dscl|nvram|mdfind|launchctl)\b|\b(sysadminctl|createhomedir)\b|\bsecurity\s+(dump-keychain|find-generic-password|find-internet-password|add-trusted-cert)\b|\bdefaults\s+write\b'
     reason: macOS security control, keychain, or login persistence
 
   - id: deny-windows-lolbins
